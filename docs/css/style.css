@@ -195,6 +195,17 @@ article h2 {
 	margin: 0;
 }
 
+.status.other {
+	display: inline-block;
+	background-color: #fcfcd0;
+	color: #dabb31;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: bold;
+	margin: 0;
+}
+
 footer {
 	margin-top: 60px;
 	text-align: right;
