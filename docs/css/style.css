@@ -1,0 +1,141 @@
+:root {
+	--bg-color: #fcfaf5;
+	--main-red: #a52a2a;
+	--text-color: #2c2c2c;
+	--link-color: #2e73d3;
+	--accent-color: #4a4a4a;
+	--border-color: #d1d1d1;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 1.8;
+	margin: 0;
+	padding: 40px 20px;
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	max-width: 800px;
+	width: 100%;
+	background: #ffffff;
+	padding: 60px;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+	border-top: 8px solid var(--main-red);
+}
+
+header {
+	text-align: center;
+	margin-bottom: 50px;
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 30px;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: center;
+	padding: 12px 0px 10px;
+	position: relative;
+}
+header nav ul li {
+	margin: 0 10px;
+}
+header nav ul li a {
+	color: var(--link-color);
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+header nav ul li a:hover {
+	text-decoration: underline;
+	border: 1px solid var(--nav-color);
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border: #2c2c2c 1px;
+	margin: 10px 0;
+}
+
+h1 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	margin: 0;
+	color: var(--main-red);
+}
+
+.subtitle {
+	font-size: 0.9rem;
+	color: var(--accent-color);
+	margin-top: 10px;
+	display: block;
+}
+
+article h2 {
+	font-size: 1.4rem;
+	border-left: 4px solid var(--main-red);
+	padding-left: 15px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	background-color: #f9f9f9;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.clause {
+	margin-bottom: 30px;
+}
+
+.clause h3 {
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-bottom: 10px;
+	color: var(--main-red);
+}
+
+.clause p {
+	margin: 0 0 10px 0;
+	padding-left: 5px;
+}
+
+.kanji-list {
+	list-style: none;
+	padding: 0;
+	margin: 20px 0;
+	margin-left: 1rem;
+}
+
+.kanji-list li {
+	display: grid;
+	grid-template-columns: 2em 1fr;
+	gap: 0;
+	margin-bottom: 1rem;
+	align-items: start;
+}
+
+.num {
+	color: var(--text-color);
+	text-align: left;
+}
+
+.kanji-list li span:last-child {
+	text-align: justify;
+	line-height: 1.8;
+}
+
+footer {
+	margin-top: 60px;
+	text-align: right;
+	font-size: 0.9rem;
+	color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+	main { padding: 30px 20px; }
+	h1 { font-size: 1.4rem; }
+}
