@@ -186,10 +186,14 @@ article {
 }
 
 .caption p {
-	margin-bottom: 5px;
+	margin-bottom: 0.05rem;
 	color: var(--accent-color);
 	font-size: 0.8rem;
 	font-weight: 400;
+	padding-left: 5px;
+}
+.details-content .caption p {
+	margin-bottom: 0.05rem;
 }
 
 .kanji-list {
@@ -467,7 +471,8 @@ article {
 	color: #fff;
 	font-size: 40px;
 	text-decoration: none;
-	padding: 10px 20px;
+	padding: 10px 5px 20px;
+	line-height: 0.8;
 	background: rgba(0,0,0,0.4);
 	border-radius: 4px;
 	transition: background 0.3s;
@@ -485,6 +490,52 @@ article {
 
 .lightbox-next {
 	right: 20px;
+}
+
+.property-container {
+	width: 100%;
+	max-width: 900px;
+	margin: 20px auto;
+	color: #333;
+}
+
+.property-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ccc;
+}
+
+.property-table th,
+.property-table td {
+	border: 1px solid #ccc;
+	padding: 12px 15px;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.property-table th {
+	background-color: #f9f9f9;
+	font-weight: bold;
+	text-align: center;
+	width: 120px;
+}
+
+.property-table td {
+	background-color: #fefefe;
+	text-align: left;
+}
+
+.property-table td:nth-of-type(odd) {
+	width: auto;
+}
+
+.small-text {
+	font-size: 13px;
+}
+
+.remarks {
+	font-size: 13px;
+	vertical-align: top;
 }
 
 /*
