@@ -69,6 +69,14 @@ header nav ul li a.gerade:hover {
 	color: var(--text-color);
 	text-decoration: none;
 }
+header nav ul li a.joingenoss {
+	color: var(--bg-color);
+	background-color: #a52a2a;
+}
+header nav ul li a.joingenoss:hover {
+	color: var(--bg-color);
+	text-decoration: none;
+}
 header nav ul li a:hover {
 	border: 1px solid var(--nav-color);
 }
@@ -95,6 +103,55 @@ h1 {
 	letter-spacing: 0.1em;
 	margin: 0;
 	color: var(--main-red);
+}
+
+.features {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	margin: 20px 0;
+	text-align: center;
+}
+
+.feature-card {
+	padding: 20px;
+	border: 1px solid var(--border-color);
+	border-top: 4px solid var(--main-red);
+	background-color: #fcfaf5;
+}
+
+.feature-card h3 {
+	color: var(--main-red);
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-size: 1.1rem;
+}
+
+.feature-card p {
+	font-size: 0.85rem;
+	line-height: 1.6;
+	color: var(--text-color);
+}
+
+.cta-button {
+	display: block;
+	background-color: var(--main-red);
+	color: #ffffff;
+	text-align: center;
+	padding: 18px;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(165, 42, 42, 0.2);
+}
+
+.cta-button:hover {
+	background-color: #8b2424;
+	box-shadow: 0 6px 20px rgba(165, 42, 42, 0.3);
+	text-decoration: none;
+	color: #ffffff;
 }
 
 .subtitle {
@@ -230,6 +287,15 @@ article {
 .housing-list h2 {
 	text-align: center;
 	margin-bottom: 30px;
+	font-weight: 600;
+	color: #333;
+	border-bottom: 2px solid #eee;
+	padding-bottom: 10px;
+}
+
+h2.desc {
+	text-align: center;
+	margin-bottom: 10px;
 	font-weight: 600;
 	color: #333;
 	border-bottom: 2px solid #eee;
@@ -622,5 +688,120 @@ header nav ul {
 		border-radius: 4px;
 		display: inline-block;
 		font-size: 0.85rem;
+	}
+}
+/*
+@font-face {
+	font-family: 'KKBahn';
+	src: url('https://data.reale-korobka.com/fonts/KKBahn.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+*/
+
+.background-animation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+	background-color: #e52629;
+	animation: fadeIn 1.5s ease-out forwards;
+}
+
+.background-animation .row {
+	display: flex;
+	align-items: center;
+	height: 10vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.background-animation .loop {
+	display: flex;
+	white-space: nowrap;
+	width: max-content;
+	will-change: transform;
+	animation-duration: 480s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: calc(1s * var(--i) * -1);
+}
+.background-animation .row:nth-child(odd) .loop {
+	animation-name: scroll-left;
+}
+.background-animation .row:nth-child(even) .loop {
+	animation-name: scroll-right;
+}
+.background-animation span {
+	font-family: 'KKBahn', sans-serif;
+	color: #FFF;
+	font-size: 12vh;
+	font-weight: 900;
+	line-height: 0.8;
+	letter-spacing: 0.1em;
+	padding-left: 0.2em;
+	text-transform: uppercase;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: rotate(0.03deg);
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+@keyframes scroll-right {
+	0% { transform: translate3d(-50%, 0, 0); }
+	100% { transform: translate3d(0%, 0, 0); }
+}
+@keyframes scroll-left {
+	0% { transform: translate3d(0%, 0, 0); }
+	100% { transform: translate3d(-50%, 0, 0); }
+}
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.joinbg body {
+	background-color: transparent;
+}
+
+main {
+	position: relative;
+}
+
+.bg-toggle-container {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 10;
+}
+
+.toggle-btn {
+	background: none;
+	border: 1px solid var(--border-color);
+	color: var(--accent-color);
+	padding: 4px 10px;
+	border-radius: 20px;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s;
+	opacity: 0.6;
+}
+
+.toggle-btn:hover {
+	opacity: 1;
+	background-color: #f0f0f0;
+	color: var(--text-color);
+}
+
+@media (max-width: 480px) {
+	.bg-toggle-container {
+		top: 10px;
+		right: 10px;
 	}
 }
