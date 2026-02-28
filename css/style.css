@@ -690,7 +690,7 @@ header nav ul {
 		font-size: 0.85rem;
 	}
 }
-/*
+
 @font-face {
 	font-family: 'KKBahn';
 	src: url('https://data.reale-korobka.com/fonts/KKBahn.ttf') format('truetype');
@@ -698,7 +698,6 @@ header nav ul {
 	font-style: normal;
 	font-display: swap;
 }
-*/
 
 .background-animation {
 	position: fixed;
