@@ -335,6 +335,7 @@ h2.desc {
 	font-size: 0.85rem;
 	font-weight: 600;
 	margin: 0;
+	white-space: nowrap
 }
 
 .status.filled {
@@ -346,6 +347,7 @@ h2.desc {
 	font-size: 0.85rem;
 	font-weight: 600;
 	margin: 0;
+	white-space: nowrap
 }
 
 .status.other {
@@ -357,6 +359,7 @@ h2.desc {
 	font-size: 0.85rem;
 	font-weight: 600;
 	margin: 0;
+	white-space: nowrap
 }
 
 /*
